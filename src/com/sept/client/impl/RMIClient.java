@@ -15,8 +15,9 @@ import com.rmi.IAccount;
 public class RMIClient {
     public static void main(String args[]) {
         try {
-            IAccount rhello = (IAccount) Naming.lookup("rmi://192.168.1.230:6789/SeptemberRMI");
-            System.out.println(rhello.getUser().getUname());
+            //Xác định RMI máy chủ.
+            IAccount iAccount = (IAccount) Naming.lookup("rmi://192.168.1.230:6789/SeptemberRMI");
+            System.out.println("Name: " + iAccount.getUser().getUname());
         } catch (NotBoundException e) {
             e.printStackTrace();
         } catch (MalformedURLException e) {

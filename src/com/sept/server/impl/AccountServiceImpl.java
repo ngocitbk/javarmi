@@ -20,7 +20,7 @@ public class AccountServiceImpl extends UnicastRemoteObject implements IAccount 
     public User getUser() {
         User u = new User();
         u.setId(23);
-        u.setUname("xwqiang");
+        u.setUname("framgia");
         u.setPasswd("222");
         return u;
     }

@@ -18,7 +18,8 @@ public class RMIServer {
             IAccount rAccount = new AccountServiceImpl();
 
             LocateRegistry.createRegistry(6789);
-
+            
+            // Đăng ký đối tượng này với rmiregistry
             Naming.bind("rmi://192.168.1.230:6789/SeptemberRMI", rAccount);
 
             System.out.println(">>>>>INFO: RMI Server started!!!!!!!!");
